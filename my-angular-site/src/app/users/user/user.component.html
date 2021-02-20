@@ -1,0 +1,66 @@
+<section class="section has-background-light">
+    <div class="container center">
+        <div class="card  " *ngIf="user">
+            <img [src]="user.avatar_url">
+            <h2 class="title center">{{user.login}}</h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <article class="media notification is-info">
+                <figure class="media-left">
+                    <span class="icon is-medium has-text-success">
+                        <fa-icon size="2x" [icon]="faCheckSquare"></fa-icon>
+                    </span>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <h1 class="title">Box 2</h1>
+                        <p class="subtitle">Content</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <div class="notification is-success">
+                <h1 class="title">Box 2</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="notification is-warning">
+                <h1 class="title">Box 3</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="notification is-danger">
+                <h1 class="title">Box 3</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="notification is-info">
+                <h1 class="title">Box 1</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="notification is-success">
+                <h1 class="title">Box 2</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="notification is-danger">
+                <h1 class="title">Box 3</h1>
+                <p class="subtitle">Content</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,62 @@
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+
+            <h1 class="title">Contact Me</h1>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <form [formGroup]="formData" (ngSubmit)="processForm(formData.value)">
+
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control has-icons-left">
+                    <input type="text" name="Fullname" class="input" placeholder="Your name" [(ngModel)]="name"
+                        formControlName="Fullname">
+                    <span class="icon is-small is-left">
+                        <fa-icon [icon]="faSmile"></fa-icon>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left">
+                    <input type="email" name="Email" class="input" aria-describedby="emailHelp" placeholder="Your email"
+                        [(ngModel)]="email" formControlName="Email">
+                    <span class="icon is-small is-left">
+                        <fa-icon [icon]="faEnvelope"></fa-icon>
+                    </span>
+                </div>
+
+                <small id="emailHelp">
+                    Your email will not be shared with anyone else
+                </small>
+            </div>
+
+
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control ">
+                    <textarea class="textarea" name="Message" placeholder="Your message" formControlName="Message">
+                </textarea>
+                </div>
+            </div>
+
+
+            <button type="submit" class="button is-primary is-large" [disabled]="!formData.valid">Submit</button>
+
+        </form>
+
+    </div>
+
+</section>
